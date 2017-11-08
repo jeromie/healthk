@@ -1,0 +1,905 @@
+<!-- saved from url=(0079)https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action -->
+<html>
+  <head>
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <title>
+      Retail Store Search | WSAdmin
+    </title>
+    <link href="http://www.healthkart.com/favicon.ico" rel="icon" />
+    <link href="http://www.healthkart.com/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <link href="./healthkart_files/styles.css" rel="stylesheet" type="text/css" />
+    <link href="./healthkart_files/kickstart.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./healthkart_files/chosen.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./healthkart_files/jquery.ui.autocomplete.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./healthkart_files/jquery.ui.theme.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./healthkart_files/style.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="./healthkart_files/css/custom.css" media="all" rel="stylesheet" type="text/css" /><!-- CUSTOM STYLES -->
+    <!-- CUSTOM STYLES -->
+
+    <script src="./healthkart_files/jquery-1.7.2.min.js" type="text/javascript">
+</script>
+    <script src="./healthkart_files/jquery-ui-1.8.21.custom.min.js" type="text/javascript">
+</script>
+    <script src="./healthkart_files/prettify.js" type="text/javascript">
+</script>
+    <script src="./healthkart_files/underscore-1.3.1.js" type="text/javascript">
+</script>
+    <script src="./healthkart_files/kickstart.js" type="text/javascript">
+</script>
+    <script src="./healthkart_files/hkCommon.js" type="text/javascript">
+</script>
+    <script type="text/javascript">
+//<![CDATA[
+    //      jQuery(document).ready(function()
+    //      {
+    //        var d = new Date();
+    //        d = d.getTime();
+    //        if (jQuery('#reloadValue').val().length == 0)
+    //        {
+    //          jQuery('#reloadValue').val(d);
+    //          jQuery('body').show();
+    //        }
+    //        else
+    //        {
+    //          jQuery('#reloadValue').val('');
+    //          location.reload();
+    //        }
+    //      });
+    $(document).ready(function(e) {
+    var $input = $('#refresh');
+
+    $input.val() == 'yes' ? location.reload(true) : $input.val('yes');
+    });
+    //]]>
+    </script>
+  </head>
+  <body style="">
+    <div style="padding:5px;">
+      <div align="center" class="color-darkred" style="height:30px; font-size:20px;">
+        <label class="bold">Current Environment: qa</label>
+      </div>
+
+      <div class="right">
+        Hi <label class="bold">Dhull</label> , Store: <label class="bold" id="store">Healthkart</label> <a href="https://catalog76.healthkartqa.com/admin/core/user/Logout.action">Logout</a>
+      </div>
+    </div>
+
+    <div id="cssmenu">
+      <ul>
+        <li class="has-sub first">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#" target="_blank"><span>Catalog</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/core/BrandsSearch.action"><span>Brands</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/core/OptionSearch.action"><span>Attributes</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/core/SpecGroupSearch.action"><span>Groups</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/procurement/SupplierSearch.action"><span>Suppliers</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/procurement/ManufacturerSearch.action"><span>Manufacturers</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/vendor/VendorSearch.action"><span>Vendors</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/product/ProductFeatureRatingSearch.action"><span>Product Feature Rating</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/product/CategoryReviewLevelSearch.action"><span>Category Review Level Search</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/unit/UnitSearch.action"><span>Manage Units</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/tags/TagsSearch.action"><span>Tags</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>Store Catalog</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/ms/search/catalog/CatalogSearch.action"><span>Duplicate Catalog</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/category/Category.action"><span>Categories</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/menu/MenuNodeSearch.action"><span>Menu</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/expression/ExpressionSearch.action"><span>Expressions</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/product/StoreProductSearch.action"><span>Products</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/variant/StoreVariantSearch.action"><span>Variants</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/variant/InventorySnapsort.action"><span>B2B Inventory Snapsort</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/variant/AlternateVariantSearch.action"><span>Alternate Variants</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/variant/StoreVariantConfigSearch.action"><span>Variant Config</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/loyalty/LoyaltyRuleSearch.action"><span>Loyalty Rule</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/topSearch/TopSearch.action"><span>Top Search</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>Promos</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/offer/OfferSearch.action"><span>Offers</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/offer/CouponSearch.action"><span>Coupons</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/pack/PackSearch.action"><span>Packs</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/pack/PackConfigSearch.action"><span>Pack Config</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/freebie/FreebieSearch.action"><span>Freebies</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/sale/SaleSearch.action"><span>Sale</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/event/EventSearch.action"><span>Event Registration</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/event/EventUserMapping.action"><span>Event User Mapping</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>UI</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/page/PageSearch.action"><span>Page</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/url/UrlRedirectionSearch.action"><span>Url Redirection</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/image/ImageSearch.action"><span>Images</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/message/MessageSearch.action"><span>Messages</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/crud/plan/PlanSearch.action"><span>Plans</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/form/FormSearch.action"><span>Forms</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>Payment</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/search/payment/PaymentSearch.action"><span>Payments</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/payment/CodPaymentSearch.action"><span>COD Payments</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/payment/NeftPaymentSearch.action"><span>NEFT/Promotional/Cheque/Credit/SIS Payments</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/payment/PendingRefundsSearch.action"><span>Pending Refunds</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/payment/VendorPaymentUpdate.action"><span>Bulk Update Payment Status</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/payment/UserPaymentStatusSearch.action"><span>User Payment Status</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>Orders</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/search/order/OprSearch.action"><span>Oprs</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/crud/order/OprLiUpdate.action"><span>Opr Update</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/order/PendingOprSearch.action"><span>Pending Oprs</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/crud/order/BulkOrderDeliveryMark.action"><span>Bulk Order Delivery Marking</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/crud/order/OrderUploads.action"><span>Order Uploads</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/UnifiedView/SearchCustomerInformation.action"><span>Unified View</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>User</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/search/user/UserSearch.action"><span>Users</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/user/userPoints/RewardPointSearch.action"><span>Reward Points</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/user/userPoints/LoyaltyPointSearch.action"><span>B2B Loyalty Points</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/crud/user/AgentUserMapping.action"><span>Agent User Mapping</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/crud/user/UserTinMapping.action"><span>User Tin Mapping</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>Admin</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/accounts/PopulateBusyMPData.action"><span>Populate MP Data</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/core/cache/CacheAdmin.action"><span>Cache</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/core/Tasks.action"><span>Tasks</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/mobileApp/AppPayment.action"><span>Payment Modes</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action"><span>Retail Stores</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/hkauth/HkAuthenticSearch.action"><span>Auth Codes</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/sap/CreateGateway.action"><span>Gateway</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/core/Subscription.action"><span>Subscription</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/crud/catalog/sap/SAPDataReplay.action"><span>SAP Replay</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>Bulk Tasks</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/core/rebuild/BulkTask.action"><span>Variants</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/freebie/FreebieSch.action"><span>Manage Freebie Schedules</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/variant/PriceSch.action"><span>Manage Price Schedules</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/variant/VariantPriceCrawl.action"><span>Manage Price Crawlers</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/crud/catalog/variant/ProductVariantReviewCrud.action?bulkUploadReview="><span>Bulk Review Upload</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/crud/catalog/variant/ProductVariantReviewSearch.action"><span>Bulk Review Publish</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/crud/product/BulkEditProductFeatureRating.action"><span>Bulk Edit Product Rating Feature</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/crud/catalog/tags/BulkEditTags.action"><span>Bulk Edit Tags</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/crud/catalog/user/BulkUserCrud.action"><span>Bulk Upload Users</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/catalog/variant/VariantInventorySearch.action"><span>Manage Cut Off Inventory</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/crud/location/PincodeCrud.action"><span>Pincode CRUD</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/crud/order/BulkOprLiCheckin.action"><span>Bulk Check-in for RTO/RPU</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/crud/catalog/user/BulkMarketPlaceDataUpload.action"><span>Bulk Upload Market Place Data</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>Reports</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/pages/audit/audit.jsp"><span>Audit</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/pages/catalog/variant/publisher/unpublishedVariantReport.jsp"><span>Unpublished Variant Report</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/pages/catalog/variant/publisher/unpublishedVariantManageReport.jsp"><span>Unpublished Variant Report Detail</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/pages/catalog/variant/publisher/duplicateVariantNameReport.jsp"><span>Duplicate Variant Report</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>Ops</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/search/location/LocationSearch.action?viewStates"><span>States</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/location/LocationSearch.action"><span>Cities</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/location/PincodeSearch.action"><span>Pincodes</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>App</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/crud/mobileApp/VersionCrud.action"><span>Versioning</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/mobileApp/CardSearch.action"><span>Cards</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/mobileApp/AppSectionSearch.action"><span>App Sections</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>Counselling</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/search/appointment/CounsellorServiceSearch.action"><span>Services</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/appointment/CounsellorSearch.action"><span>Counsellors</span></a>
+            </li>
+
+            <li>
+              <a href="https://catalog76.healthkartqa.com/admin/search/appointment/AppointmentSearch.action"><span>Appointments</span></a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/appointment/LeavesSearch.action"><span>Manage Leaves</span></a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>FitFreak</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/search/community/StoreArticleSearch.action">Articles</a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/community/StoreArticleTagSearch.action">Tags</a>
+            </li>
+          </ul>
+        </li>
+
+        <li class="has-sub last">
+          <a href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action#"><span>Grunt</span></a>
+          <ul>
+            <li class="first">
+              <a href="https://catalog76.healthkartqa.com/admin/search/fitness/GruntTagSearch.action">Tags</a>
+            </li>
+
+            <li class="last">
+              <a href="https://catalog76.healthkartqa.com/admin/search/fitness/GruntBadgeSearch.action">Badges</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+
+    <div id="error-messages" style="display: none;">
+    </div>
+
+    <div class="alert messages">
+    </div>
+
+    <div class="content-outer wrap">
+      <div class="col_12 column">
+        <div class="inner">
+          <div id="page-heading">
+            <h4>
+              Manage Retail Stores
+            </h4>
+          </div>
+
+          <div class="col_12 column">
+            <div class="inner">
+              <form action="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action" method="post">
+                <div class="col_10 column">
+                  <div class="inner">
+                    <fieldset>
+                      <legend><em>Search Retail Stores</em></legend> <label>Id</label> <input class="auto-adjust" name="id" style="max-width: 747px; min-width: 200px; width: 0px;" type="text" value="" /><label>Name</label> <input class="auto-adjust" name="retailStoreName" style="max-width: 747px; min-width: 200px; width: 0px;" type="text" value="" /><label>Active</label> <select name="isActive">
+                        <option selected="selected" value="null">
+                          All
+                        </option>
+                        <option value="on">
+                          Active
+                        </option>
+                        <option value="off">
+                          Deactive
+                        </option>
+                      </select>
+                      <div class="mrgn-tb-10 clear">
+                      </div>
+                      <input class="button blue small" id="searchRetailStore" name="searchRetailStores" type="submit" value="Search Retail Stores" />
+                    </fieldset>
+                  </div>
+                </div>
+
+                <div class="col_2 column">
+                  <div class="inner">
+                    <fieldset>
+                      <legend><em>Add</em></legend> <a class="button blue small" href="https://catalog76.healthkartqa.com/admin/crud/retail/RetailStoreCrud.action?createRetailStore=">Create Retail Store</a>
+                    </fieldset>
+                  </div>
+                </div>
+
+                <div style="display: none;">
+                  <input name="_sourcePage" type="hidden" value="-nD3mmEqgdqTBMSTMfgRhoH2uQcu1eHzB6m36GoEky_sBYhDydl-1A==" /><input name="__fp" type="hidden" value="Lw7MYBtUtHs=" />
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div class="clear">
+          </div>
+
+          <div class="col_12 column">
+            <div class="inner">
+              <table cellpadding="0" cellspacing="0" class="striped tight retails-stores-table">
+                <tbody>
+                  <tr class="alt first last">
+                    <th>
+                      Id
+                    </th>
+                    <th>
+                      Name
+                    </th>
+                    <th>
+                      Prefix
+                    </th>
+                    <th style="min-width: 100px;">
+                      Store Owner
+                    </th>
+                    <th>
+                      Shortcode
+                    </th>
+                    <th style="min-width: 100px;">
+                      Enabled Vendors
+                    </th>
+                    <th>
+                      Address
+                    </th>
+                    <th>
+                      Action(s)
+                    </th>
+                  </tr>
+                </tbody>
+
+                <tbody>
+                  <tr class="first">
+                    <td>
+                      301
+                    </td>
+                    <td>
+                      DEL Punjabi Bagh
+                    </td>
+                    <td>
+                      PB
+                    </td>
+                    <td>
+                      Owner Name
+                    </td>
+                    <td>
+                      OWR
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Vendor 1</li>
+                        <li>Vendor 2</li>
+                        <li>Vendor 3</li>
+                      </ul>
+                    </td>
+                    <td>
+                      Shop No.15, Ground Floor, North West Avenue Club Road, Punjabi Bagh Extension DELHI 110026
+                    </td>
+                    <td>
+                      <a href="https://catalog76.healthkartqa.com/admin/crud/retail/RetailStoreCrud.action?editRetailStore=&amp;retailStoreDTO.id=301"><span class="icon darkblue small" style="display: inline-block;"><span>7</span></span></a> <a class="delete verify" href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action?deleteRetailStore=&amp;retailId=301"><span class="icon darkblue small" style="display: inline-block;"><span>X</span></span></a>
+                    </td>
+                  </tr>
+
+                  <tr class="alt">
+                    <td>
+                      310
+                    </td>
+                    <td>
+                      DEL Rajouri Garden
+                    </td>
+                    <td>
+                      RJR
+                    </td>
+                    <td>
+                      Owner Name
+                    </td>
+                    <td>
+                      OWR
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Vendor 1</li>
+                        <li>Vendor 2</li>
+                        <li>Vendor 3</li>
+                      </ul>
+                    </td>
+                    <td>
+                      Shop No-3, Plot No. 48, Block V Rajouri Garden DELHI 110027
+                    </td>
+                    <td>
+                      <a href="https://catalog76.healthkartqa.com/admin/crud/retail/RetailStoreCrud.action?editRetailStore=&amp;retailStoreDTO.id=310"><span class="icon darkblue small" style="display: inline-block;"><span>7</span></span></a> <a class="delete verify" href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action?deleteRetailStore=&amp;retailId=310"><span class="icon darkblue small" style="display: inline-block;"><span>X</span></span></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      410
+                    </td>
+                    <td>
+                      DEL Dwarka Sec 10
+                    </td>
+                    <td>
+                      DWR
+                    </td>
+                    <td>
+                      Owner Name
+                    </td>
+                    <td>
+                      OWR
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Vendor 1</li>
+                        <li>Vendor 2</li>
+                        <li>Vendor 3</li>
+                      </ul>
+                    </td>
+                    <td>
+                      Shop No. G-3, Plot No. 9, MLU Pankaj Arcade Sector -10, Dwarka DELHI 110075
+                    </td>
+                    <td>
+                      <a href="https://catalog76.healthkartqa.com/admin/crud/retail/RetailStoreCrud.action?editRetailStore=&amp;retailStoreDTO.id=410"><span class="icon darkblue small" style="display: inline-block;"><span>7</span></span></a> <a class="delete verify" href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action?deleteRetailStore=&amp;retailId=410"><span class="icon darkblue small" style="display: inline-block;"><span>X</span></span></a>
+                    </td>
+                  </tr>
+
+                  <tr class="alt">
+                    <td>
+                      510
+                    </td>
+                    <td>
+                      FDB Sec 16
+                    </td>
+                    <td>
+                      FDB
+                    </td>
+                    <td>
+                      Owner Name
+                    </td>
+                    <td>
+                      OWR
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Vendor 1</li>
+                        <li>Vendor 2</li>
+                        <li>Vendor 3</li>
+                      </ul>
+                    </td>
+                    <td>
+                      Shop No. 4, Boot No. 4, Huda Market Sector-16 FARIDABAD 121002
+                    </td>
+                    <td>
+                      <a href="https://catalog76.healthkartqa.com/admin/crud/retail/RetailStoreCrud.action?editRetailStore=&amp;retailStoreDTO.id=510"><span class="icon darkblue small" style="display: inline-block;"><span>7</span></span></a> <a class="delete verify" href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action?deleteRetailStore=&amp;retailId=510"><span class="icon darkblue small" style="display: inline-block;"><span>X</span></span></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      610
+                    </td>
+                    <td>
+                      GGN PVK
+                    </td>
+                    <td>
+                      PMV
+                    </td>
+                    <td>
+                      Owner Name
+                    </td>
+                    <td>
+                      OWR
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Vendor 1</li>
+                        <li>Vendor 2</li>
+                        <li>Vendor 3</li>
+                      </ul>
+                    </td>
+                    <td>
+                      Shop No. S-117, PVK Palam Vihar GURGAON 122001
+                    </td>
+                    <td>
+                      <a href="https://catalog76.healthkartqa.com/admin/crud/retail/RetailStoreCrud.action?editRetailStore=&amp;retailStoreDTO.id=610"><span class="icon darkblue small" style="display: inline-block;"><span>7</span></span></a> <a class="delete verify" href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action?deleteRetailStore=&amp;retailId=610"><span class="icon darkblue small" style="display: inline-block;"><span>X</span></span></a>
+                    </td>
+                  </tr>
+
+                  <tr class="alt">
+                    <td>
+                      710
+                    </td>
+                    <td>
+                      UP Noida Sec 18
+                    </td>
+                    <td>
+                      ND
+                    </td>
+                    <td>
+                      Owner Name
+                    </td>
+                    <td>
+                      OWR
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Vendor 1</li>
+                        <li>Vendor 2</li>
+                        <li>Vendor 3</li>
+                      </ul>
+                    </td>
+                    <td>
+                      Shop No G-2, JOP Plaza ,Building number P-2, Sector 18 Market NOIDA 201301
+                    </td>
+                    <td>
+                      <a href="https://catalog76.healthkartqa.com/admin/crud/retail/RetailStoreCrud.action?editRetailStore=&amp;retailStoreDTO.id=710"><span class="icon darkblue small" style="display: inline-block;"><span>7</span></span></a> <a class="delete verify" href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action?deleteRetailStore=&amp;retailId=710"><span class="icon darkblue small" style="display: inline-block;"><span>X</span></span></a>
+                    </td>
+                  </tr>
+
+                  <tr>
+                    <td>
+                      810
+                    </td>
+                    <td>
+                      PUN Patiala
+                    </td>
+                    <td>
+                      PTL
+                    </td>
+                    <td>
+                      Owner Name
+                    </td>
+                    <td>
+                      OWR
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Vendor 1</li>
+                        <li>Vendor 2</li>
+                        <li>Vendor 3</li>
+                      </ul>
+                    </td>
+                    <td>
+                      SCO No.108, New Leela Bhawan PATIALA 147001
+                    </td>
+                    <td>
+                      <a href="https://catalog76.healthkartqa.com/admin/crud/retail/RetailStoreCrud.action?editRetailStore=&amp;retailStoreDTO.id=810"><span class="icon darkblue small" style="display: inline-block;"><span>7</span></span></a> <a class="delete verify" href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action?deleteRetailStore=&amp;retailId=810"><span class="icon darkblue small" style="display: inline-block;"><span>X</span></span></a>
+                    </td>
+                  </tr>
+
+                  <tr class="alt">
+                    <td>
+                      950
+                    </td>
+                    <td>
+                      CHD Sec 35C
+                    </td>
+                    <td>
+                      CHD
+                    </td>
+                    <td>
+                      Owner Name
+                    </td>
+                    <td>
+                      OWR
+                    </td>
+                    <td>
+                      <ul>
+                        <li>Vendor 1</li>
+                        <li>Vendor 2</li>
+                        <li>Vendor 3</li>
+                      </ul>
+                    </td>
+                    <td>
+                      Booth No. 433A, Sector-35C CHANDIGARH 160022
+                    </td>
+                    <td>
+                      <a href="https://catalog76.healthkartqa.com/admin/crud/retail/RetailStoreCrud.action?editRetailStore=&amp;retailStoreDTO.id=950"><span class="icon darkblue small" style="display: inline-block;"><span>7</span></span></a> <a class="delete verify" href="https://catalog76.healthkartqa.com/admin/search/retail/RetailStoreSearch.action?deleteRetailStore=&amp;retailId=950"><span class="icon darkblue small" style="display: inline-block;"><span>X</span></span></a>
+                    </td>
+                  </tr>
+
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="fancybox-tmp">
+    </div>
+
+    <div id="fancybox-loading">
+    </div>
+
+    <div id="fancybox-overlay">
+    </div>
+
+    <div id="fancybox-wrap">
+      <div id="fancybox-outer">
+        <div class="fancybox-bg" id="fancybox-bg-n">
+        </div>
+
+        <div class="fancybox-bg" id="fancybox-bg-ne">
+        </div>
+
+        <div class="fancybox-bg" id="fancybox-bg-e">
+        </div>
+
+        <div class="fancybox-bg" id="fancybox-bg-se">
+        </div>
+
+        <div class="fancybox-bg" id="fancybox-bg-s">
+        </div>
+
+        <div class="fancybox-bg" id="fancybox-bg-sw">
+        </div>
+
+        <div class="fancybox-bg" id="fancybox-bg-w">
+        </div>
+
+        <div class="fancybox-bg" id="fancybox-bg-nw">
+        </div>
+
+        <div id="fancybox-content">
+        </div>
+        <a id="fancybox-close"></a>
+        <div id="fancybox-title">
+        </div>
+        <a href="javascript:;" id="fancybox-left"><span class="fancy-ico" id="fancybox-left-ico"></span></a><a href="javascript:;" id="fancybox-right"><span class="fancy-ico" id="fancybox-right-ico"></span></a>
+      </div>
+    </div>
+  </body>
+</html>

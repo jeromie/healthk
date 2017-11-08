@@ -1,0 +1,49 @@
+#cssmenu{
+	background: #fff;
+	border-color: #ffffff;
+	border-radius: 0;
+	& > ul > li > ul > li a{
+		&:hover{
+			background: #fff;
+		}
+	}
+	& > ul > li a{
+		border: none;
+		color: #525252;
+		text-shadow: none;
+		&:before{
+			top: 16px;
+		    right: 6px;
+		    border: 4px solid transparent;
+		    border-top: 4px solid #53585d;
+		}
+		&:after{
+			border-color: #bfbfbf;
+		}
+	}
+
+	ul li.has-sub:hover > a{
+		background: #fff;
+		color: @brand-secondary;
+		padding-top: 12px;
+		padding-bottom: 12px;
+		top: 0;
+		z-index: 0;
+		&:before{
+			top: 16px;
+		}
+	}
+
+	ul li > ul{
+		background: #fff;
+		top: 36px;
+		margin-left: 0;
+		box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.25);
+		a{
+			&:hover{
+				color: @brand-secondary;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,760 @@
+/*
+	99Lime.com HTML KickStart by Joshua Gatcke
+	style.css
+	
+*/
+
+/*---------------------------------
+	IMPORTS
+-----------------------------------*/
+/*@import url(http://fonts.googleapis.com/css?family=Arimo:400,700);*/
+
+/*---------------------------------
+	OVERRIDES
+-----------------------------------*/
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Trebuchet Ms", arial, verdana, sans-serif;
+  margin: 0px;
+}
+
+thead th,
+  tbody th {
+  font-family: "Trebuchet Ms", arial, verdana, sans-serif;
+
+}
+
+button,
+  a.btn,
+  input[type="submit"],
+  input[type="reset"],
+  input[type="button"] {
+  font-family: "Trebuchet Ms", arial, verdana, sans-serif;
+}
+
+.menu {
+  font-family: "Trebuchet Ms", arial, verdana, sans-serif;
+}
+
+blockquote {
+  font-family: "Trebuchet Ms", arial, verdana, sans-serif;
+}
+
+/*---------------------------------
+	LAYOUT
+-----------------------------------*/
+body {
+  margin: 0;
+  padding: 0;
+  color: #000;
+  background: #FBFBFB repeat center top;
+
+  font-size: 12px;
+  font-family: Arial;
+  text-shadow: 0px 0px 1px transparent; /* google font pixelation fix */
+}
+
+.wrap {
+  width: 1020px; /*960*/
+  background: #fff;
+  margin-left: 30px;
+  margin-right: 30px;
+  background: url("/images/shared/content_repeat.jpg") repeat-x scroll 0 0 transparent;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  margin: 20px auto 20px auto;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid #ccc; /*background-image: linear-gradient(top, rgb(232, 229, 232) 10%, rgb(255, 255, 255) 15%);*/
+/*background-image: -o-linear-gradient(top, rgb(232, 229, 232) 10%, rgb(255, 255, 255) 15%);*/
+/*background-image: -moz-linear-gradient(top, rgb(232, 229, 232) 10%, rgb(255, 255, 255) 15%);*/
+/*background-image: -webkit-linear-gradient(top, rgb(232, 229, 232) 10%, rgb(255, 255, 255) 15%);*/
+/*background-image: -ms-linear-gradient(top, rgb(232, 229, 232) 10%, rgb(255, 255, 255) 15%);*/
+
+/*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0.1, rgb(232, 229, 232)), color-stop(0.15, rgb(255, 255, 255)));*/
+
+}
+
+.menu {
+  margin: -1px -1px 0 -1px;
+}
+
+#footer {
+  text-align: center;
+  padding: 20px;
+  margin: 0;
+  background: #fff;
+  border-top: 1px solid #ccc;
+  color: #999;
+  font-size: 0.8em;
+  text-shadow: 0px 1px 1px #fff;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+#link-top {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  *right: 25px; /*IE 7 ONLY*/
+  left: auto;
+  color: #666;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  background: #e5e5e5;
+  line-height: 100%;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+}
+
+.translucent {
+  opacity: 0.3;
+}
+
+.align-left {
+  float: left;
+  margin: 0 10px 5px 0;
+}
+
+img.align-right {
+  float: right;
+  margin: 0 0 5px 10px;
+}
+
+span.optionsTab {
+  display: none;
+  position: relative;
+  padding: 8px;
+  border-radius: 10px;
+  background-color: gray;
+  z-index: 1;
+}
+
+span.optionsTab a {
+  background: none repeat scroll 0 0 transparent;
+  border: medium none;
+  margin: 0;
+  padding: 0;
+}
+
+.gallery div.imgDiv {
+  float: left;
+}
+
+.word-wrap {
+  word-wrap: break-word;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.selectable .ui-selecting {
+  background: #FFA84C;
+}
+
+.selectable .ui-selected {
+  background: #FF7B0D;
+  color: white;
+}
+
+.strike-through {
+  text-decoration: line-through;
+}
+
+.multi-items {
+  height: 35px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.hide {
+  display: none;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+label.readonly {
+  color: #ccc;
+}
+
+input[readonly="readonly"], input.readonly {
+  color: #999;
+  background: #f5f5f5;
+  -moz-box-shadow: inset 0px 0px 2px #ddd;
+  -webkit-box-shadow: inset 0px 1px 2px #ddd;
+  box-shadow: inset 0px 1px 2px #ddd;
+}
+
+/*----------------------Float elements -------------------*/
+.pull-left {
+  float: left;
+}
+
+.pull-right {
+  float: right;
+}
+
+/*------------------------left borders--------------------*/
+.green-border-left {
+  border-left: 5px solid green;
+}
+
+.red-border-left {
+  border-left: 5px solid red;
+}
+
+.darkgreen-border-left {
+  border-left: 5px solid darkgreen;
+}
+
+.orange-border-left {
+  border-left: 5px solid orange;
+}
+
+.crimson-border-left {
+  border-left: 5px solid crimson;
+}
+
+.blue-border-left {
+  border-left: 5px solid blue;
+}
+
+.darkseagreen-border-left {
+  border-left: 5px solid darkseagreen
+}
+
+.black-border-left {
+  border-left: 5px solid black
+}
+
+.aqua-border-left {
+  border-left: 5px solid aqua;
+}
+
+.chocolate-border-left {
+  border-left: 5px solid chocolate;
+}
+
+.chartreuse-border-left {
+  border-left: 5px solid chartreuse;
+}
+
+.darkmagenta-border-left {
+  border-left: 5px solid darkmagenta;
+}
+
+.antiquewhite-border-left {
+  border-left: 5px solid antiquewhite;
+}
+
+.darkgray-border-left {
+  border-left: 5px solid darkgray;
+}
+
+.lightblue-border-left {
+  border-left: 5px solid lightblue;
+}
+
+.deeppink-border-left {
+  border-left: 5px solid deeppink;
+}
+
+/*--------------right borders----------------*/
+.black-border-right {
+  border-right: 5px solid black;
+}
+
+.darkgreen-border-right {
+  border-right: 5px solid darkgreen;
+}
+
+.darkseagreen-border-right {
+  border-right: 5px solid darkseagreen;
+}
+
+.darkred-border-right {
+  border-right: 5px solid darkred;
+}
+
+.gray-border-right {
+  border-right: 5px solid gray;
+}
+
+.crimson-border-right {
+  border-right: 5px solid crimson;
+}
+
+.red-border-right {
+  border-right: 5px solid red;
+}
+
+.orange-border-right {
+  border-right: 5px solid orange;
+}
+
+.gold-border-right {
+  border-right: 5px solid gold;
+}
+
+.blue-border-right {
+  border-right: 5px solid blue;
+}
+
+.violet-border-right {
+  border-right: 5px solid violet;
+}
+
+.pink-border-right {
+  border-right: 5px solid pink;
+}
+
+.chocolate-border-right {
+  border-right: 5px solid chocolate;
+}
+
+.aqua-border-right {
+  border-right: 5px solid aqua;
+}
+
+.chartreuse-border-right {
+  border-right: 5px solid chartreuse;
+}
+
+.blue-border-right {
+  border-right: 5px solid blue;
+}
+
+.violet-border-right {
+  border-right: 5px solid violet;
+}
+
+/*---------------full borders---------------*/
+.black-border5 {
+  border: 5px solid black;
+}
+
+.gray-border3 {
+  border: 3px solid gray;
+}
+
+/*----------------background colors---------------*/
+.bgcolor-cornflowerblue {
+  background-color: cornflowerblue;
+}
+
+.bgcolor-darkseagreen {
+  background-color: darkseagreen;
+}
+
+.bgcolor-bisque {
+  background-color: bisque;
+}
+
+.bgcolor-darkblue {
+  background-color: darkblue;
+}
+
+.bgcolor-aliceblue {
+  background-color: aliceblue;
+}
+
+.bgcolor-white {
+  background-color: white;
+}
+
+.bgcolor-floralwhite {
+  background-color: floralwhite;
+}
+
+.bgcolor-lavender {
+  background-color: lavender;
+}
+
+.bgcolor-gray {
+  background-color: gray;
+}
+
+/*---------------------font colors----------------------*/
+.color-blue {
+  color: blue;
+}
+
+.color-red {
+  color: red;
+}
+
+.color-darkred {
+  color: darkred;
+}
+
+.color-green {
+  color: green;
+}
+
+.color-whitesmoke {
+  color: whitesmoke;
+}
+
+.color-black {
+  color: black;
+}
+
+/*--------------cursor styles------------------*/
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/*-------------icons styles------------*/
+td.space-icons a {
+  padding: 5px;
+  margin: 3px;
+  display: inline-block;
+}
+
+table.tight td.space-icons {
+  padding: 0px;
+}
+
+/*--------------list styles----------------*/
+ul.no-list-style {
+  list-style: none;
+}
+
+/*---------------box shadow--------------*/
+input[type="checkbox"].black-border {
+  box-shadow: 0px 0px 0px 4px black;
+}
+
+input[type="checkbox"].chocolate-border {
+  box-shadow: 0px 0px 0px 4px chocolate;
+}
+
+input[type="checkbox"].aqua-border {
+  box-shadow: 0px 0px 0px 4px aqua;
+}
+
+input[type="checkbox"].chartreuse-border {
+  box-shadow: 0px 0px 0px 4px chartreuse;
+}
+
+input[type="checkbox"].gold-border {
+  box-shadow: 0px 0px 0px 4px gold;
+}
+
+input[type="checkbox"].blue-border {
+  box-shadow: 0px 0px 0px 4px blue;
+}
+
+input[type="checkbox"].violet-border {
+  box-shadow: 0px 0px 0px 4px violet;
+}
+
+/*---------------margin-----------------*/
+.mrgn-tr-10 {
+  margin-right: 10px;
+  margin-top: 10px;
+}
+
+.mrgn-tb-0 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.mrgn-tb-5 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.mrgn-tb-10 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.mrgn-tb-20 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.mrgn-tb-40 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.mrgn-5 {
+  margin: 5px;
+}
+
+.mrgn-lr-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mrgn-lr-0 {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.mrgn-t-20 {
+  margin-top: 20px;
+}
+
+.mrgn-b-10 {
+  margin-bottom: 10px;
+}
+
+.mrgn-t-10 {
+  margin-top: 10px;
+}
+
+.mrgn-l-10 {
+  margin-left: 10px;
+}
+
+/*-------------padding---------------*/
+.pdng-tb-10 {
+  padding: 10px 0px;
+}
+
+/*----------------star------------------*/
+.big-star-rtng {
+  background: url('../../images/big-star.png') no-repeat;
+  width: 58px;
+  color: #654d19;
+  display: inline-block;
+  padding: 20px 0;
+  font-size: 15px;
+  text-align: center;
+}
+
+/*-------------------display---------------------*/
+.disp-block {
+  display: block;
+}
+
+.txt-center {
+  text-align: center;
+  padding: 15px !important;
+}
+
+.txtarea-height60 {
+  height: 60px;
+}
+
+.txtarea-title {
+  height: 40px;
+}
+
+.txtarea-height60px {
+  height: 60px;
+}
+
+/*----------------------width---------------------*/
+.width-auto {
+  width: auto;
+}
+
+.width-8em {
+  width: 8em;
+}
+
+.width-70px {
+  width: 70px;
+}
+
+.width-15per {
+  width: 15%;
+}
+
+.width-20per {
+  width: 20%;
+}
+
+.wdth-40per {
+  width: 40%;
+}
+
+.wdth-65per {
+    width: 65%;
+}
+
+
+.wdth-100per {
+  width: 100%;
+}
+
+/*----------------------height---------------------*/
+.height-auto {
+  height: auto;
+}
+
+.txtarea-height40 {
+  height: 40px;
+}
+
+/*----------------Copy component styles-----------------------*/
+.clipboard {
+  position: relative;
+}
+
+.clipboard .copy-text {
+  padding-right: 15px;
+}
+
+.clipboard .copy-button {
+  cursor: pointer;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  z-index: 1000;
+}
+
+/*----------------custom icons-----------------------*/
+.hk-icon {
+  background-image: url('/images/cs_icons.png');
+  background-repeat: no-repeat;
+  height: 20px;
+  width: 20px;
+  display: inline-block;
+  vertical-align: bottom;
+}
+
+.hk-icon.small {
+  background-size: 17px;
+}
+
+.hk-icon.key {
+  background-position: 0 -68px;
+}
+
+.hk-icon.hk-calendar {
+  background-position: 0 -160px;
+}
+
+.hk-icon.dispatch {
+  background-position: 0 -42px;
+}
+
+.hk-icon.delivery {
+  background-position: 0 -20px;
+}
+
+.hk-icon.seller {
+  background-position: 0 -90px;
+}
+
+.hk-icon.location {
+  background-position: 0 -114px;
+}
+
+.hk-icon.mobile {
+  background-position: 0 -138px;
+}
+
+/*-------------------random-----------------------*/
+.word-break-keep-all {
+  word-break: keep-all;
+}
+
+.word-break-break-all {
+  word-break: break-all;
+}
+
+.no-decoration {
+  text-decoration: none;
+}
+
+.line_spacing2 {
+  line-height: 1.5em;
+}
+
+/*----------------opr page specific-----------------------*/
+.opr-container {
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+}
+
+.opr-container .grid {
+  border-bottom: 1px solid #cccccc;
+}
+
+.opr-container .grid:last-of-type {
+  border: none;
+}
+
+.cancel-opr-btn a {
+  border: none;
+  background: none;
+  margin: 0;
+  padding: 1px;
+  text-decoration: none;
+}
+
+.cancel-opr-btn a .icon {
+  font-size: 16px;
+  margin-top: 3px;
+}
+
+.opr-list {
+  border: 1px solid #cccccc;
+  border-radius: 3px;
+  margin-top: 15px;
+
+}
+
+.opr-header {
+  background-color: #EEEEEE;
+}
+
+.vendor-header {
+  border-bottom: 1px solid #cccccc;
+  background-color: #EEEEEE;
+  padding: 10px;
+}
+
+.shipmentPacket-header {
+  border-bottom: 1px solid #cccccc;
+  background-color: #EEEEEE;
+  padding: 10px;
+}
+
+.shipment-container {
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  padding: 5px;
+}
+
+.shipment-container * {
+  box-sizing: border-box;
+}
+
+.shipment-container .action-form {
+  border-left: 1px solid #cccccc;
+}
+
+/*---------------Pagination styles -----------------*/
+.pagi .links {
+  margin-bottom: 5px;
+}
+
+.pagi .links .pagi_link {
+  background: none repeat scroll 0 0 #f1f1f1;
+  border: 1px solid #eeeeee;
+  border-radius: 2px;
+  color: #333;
+  display: inline-block;
+  margin: 0 2px;
+  padding: 4px 6px 2px;
+  text-decoration: none;
+
+}
+
+.pagi .links .pagi_link.current {
+  background: none repeat scroll 0 0 #aaaaaa;
+  border: 1px solid #888888;
+  color: #f1f1f1;
+}

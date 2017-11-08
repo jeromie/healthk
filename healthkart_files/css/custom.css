@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
+@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+.hk_ui {
+  background: linear-gradient(to bottom, #00c1bf 0%, #00c1bf 250px, #ffffff 250px, #ffffff 100%);
+  font-family: 'Lato', sans-serif;
+}
+.hk_uibody {
+  background: linear-gradient(to bottom, #00c1bf 0%, #00c1bf 10%, #ffffff 10%, #ffffff 100%);
+}
+.hk_ui .content-outer.wrap {
+  border: 0;
+  padding: 0 10px 10px;
+}
+.hk_ui .form-body {
+  background: #ffffff;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px;
+}
+.hk_ui fieldset {
+  border-radius: 0;
+  border-width: 0;
+  background: none;
+  padding: 10px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+.hk_ui fieldset.wborder {
+  border: 1px solid #d6d6d6;
+}
+.hk_ui fieldset legend {
+  margin: 0 0 0 0;
+  padding: 5px 10px;
+  border-radius: 0;
+  border: 0;
+  background: none;
+}
+.hk_ui fieldset legend em {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  color: #00c1bf;
+  background: #ffffff;
+  position: relative;
+  display: inline-block;
+  padding: 0 0 0 0;
+}
+.hk_ui * {
+  box-sizing: border-box;
+}
+.hk_ui #cssmenu {
+  background: #fff;
+  border-color: #ffffff;
+  border-radius: 0;
+}
+.hk_ui #cssmenu > ul > li > ul > li a:hover {
+  background: #fff;
+}
+.hk_ui #cssmenu > ul > li a {
+  border: none;
+  color: #525252;
+  text-shadow: none;
+}
+.hk_ui #cssmenu > ul > li a:before {
+  top: 16px;
+  right: 6px;
+  border: 4px solid transparent;
+  border-top: 4px solid #53585d;
+}
+.hk_ui #cssmenu > ul > li a:after {
+  border-color: #bfbfbf;
+}
+.hk_ui #cssmenu ul li.has-sub:hover > a {
+  background: #fff;
+  color: #00c1bf;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  top: 0;
+  z-index: 0;
+}
+.hk_ui #cssmenu ul li.has-sub:hover > a:before {
+  top: 16px;
+}
+.hk_ui #cssmenu ul li > ul {
+  background: #fff;
+  top: 36px;
+  margin-left: 0;
+  box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.25);
+}
+.hk_ui #cssmenu ul li > ul a:hover {
+  color: #00c1bf;
+}
+.hk_ui select {
+  background-color: #fff;
+  padding: 6px 5px;
+  border: 1px solid #e4e4e4;
+}
+.hk_ui input,
+.hk_ui textarea {
+  padding: 8px 5px;
+  border-radius: 2px;
+  box-shadow: none;
+  border-color: #e4e4e4;
+  font-size: 13px;
+}
+.hk_ui input[type="submit"] {
+  padding: 10px 5px;
+  font-weight: 600;
+  background: #134d6a;
+  text-shadow: none;
+}
+.hk_ui label {
+  margin: 0 0 5px 0;
+  color: #424242;
+  font-size: 13px;
+}
+.hk_ui label small {
+  color: #777777;
+}
+.hk_ui input,
+.hk_ui select,
+.hk_ui textarea {
+  margin-bottom: 0;
+  border: 0;
+  border-bottom: 1px solid #c3c3c3;
+}
+.hk_ui input:focus,
+.hk_ui select:focus,
+.hk_ui textarea:focus {
+  box-shadow: none;
+  border-color: #00c1bf;
+}
+.hk_ui form.vertical input[type=checkbox] {
+  border: 0;
+}
+.hk_ui input[type=checkbox] {
+  margin-right: 2px;
+  -webkit-appearance: none;
+  outline: 0;
+  width: 15px;
+  padding: 0 10px;
+  position: relative;
+}
+.hk_ui input[type=checkbox]:before {
+  content: "\f096";
+  font-family: 'FontAwesome';
+  background-color: #fff;
+  background-color: transparent;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  left: -4px;
+  color: #dcdcdc;
+  font-size: 1.35em;
+  cursor: pointer;
+  width: 20px;
+  text-align: center;
+}
+.hk_ui input[type=checkbox]:checked:before {
+  content: "\f046";
+  color: #00c1bf;
+}
+.hk_ui input[type=checkbox].disabled {
+  pointer-events: none;
+}
+.hk_ui input[type=checkbox].disabled:before {
+  content: '\f10c';
+  color: #ccc;
+}
+.hk_ui input[type=checkbox]:focus {
+  outline: 0;
+  box-shadow: none;
+}
+.hk_ui input[type=checkbox][readonly]:before {
+  opacity: 0.5;
+}
+.hk_ui .vendor-map-table thead th {
+  font-size: 13px;
+  border-width: 0;
+  border-bottom-width: 1px;
+  padding: 6px 10px;
+  color: #333333;
+}
+.hk_ui .vendor-map-table tbody tr {
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+}
+.hk_ui .vendor-map-table tbody tr .add-row {
+  display: none;
+}
+.hk_ui .vendor-map-table tbody tr:last-child .add-row {
+  display: inline-block;
+}
+.hk_ui .vendor-map-table tbody tr td {
+  border-left: 0;
+  border-right: 0;
+  border-bottom: 0;
+  border-top: 0;
+  padding: 10px;
+}
+.hk_ui .vendor-map-table tbody tr.owner-row select,
+.hk_ui .vendor-map-table tbody tr.owner-row input,
+.hk_ui .vendor-map-table tbody tr.owner-row label {
+  pointer-events: none;
+  background-color: #f5f5f5;
+  color: #808080;
+}
+.hk_ui .vendor-map-table tbody tr.owner-row label {
+  background-color: #fff;
+}
+.hk_ui .vendor-map-table tbody tr.owner-row .del-row {
+  display: none;
+}
+.hk_ui .vendor-map-table tbody td {
+  font-size: 0.8em;
+}
+.hk_ui .vendor-map-table .del-row {
+  color: #d61919;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 11px;
+  font-weight: 600;
+}
+.hk_ui .vendor-map-table .del-row i {
+  font-style: normal;
+  font-size: 11px;
+}
+.hk_ui .vendor-map-table.inactive tbody tr .add-row {
+  display: none;
+}
+.hk_ui .add-row {
+  text-decoration: none;
+  float: right;
+  font-size: 12px;
+  font-weight: 600;
+  color: #134d6a;
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+.hk_ui .add-row i {
+  font-style: normal;
+  font-size: 12px;
+}
+.hk_ui .add-row.hidden {
+  display: none;
+}
+.hk_ui table.striped tbody th {
+  background: url(../images/table/table_header_repeat.jpg) repeat-x;
+}
+.hk_ui table.striped tbody th {
+  padding-left: 10px;
+  font-size: 12px;
+  text-align: left;
+}
+.hk_ui table.striped tbody td {
+  padding-left: 10px;
+}
+.hk_ui .retails-stores-table th,
+.hk_ui .retails-stores-table td {
+  font-size: 0.77em;
+}
+.hk_ui .retails-stores-table ul {
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+.hk_ui .retails-stores-table ul li {
+  padding: 2px 0;
+}
+.hk_ui body,
+.hk_ui h1,
+.hk_ui h2,
+.hk_ui h3,
+.hk_ui h4,
+.hk_ui h5,
+.hk_ui h6,
+.hk_ui button,
+.hk_ui a.btn,
+.hk_ui input[type="submit"],
+.hk_ui input[type="reset"],
+.hk_ui input[type="button"],
+.hk_ui input,
+.hk_ui textarea,
+.hk_ui select,
+.hk_ui button,
+.hk_ui thead th,
+.hk_ui tbody th {
+  font-family: 'Lato', sans-serif;
+}
+.hk_ui #page-heading {
+  padding: 30px 0 20px;
+}
+.hk_ui #page-heading h4 {
+  font-size: 2.5em;
+  color: #fff;
+}
+.hk_ui p {
+  font-size: 14px;
+}
+.hk_ui .gstn-warning {
+  font-size: 13px;
+}
+.hk_ui .notice.warning {
+  border: 1px solid #e2c17d;
+  background: #fcf8e3;
+  color: #6f562b;
+}
+.hk_ui .validate-error {
+  color: red;
+  margin: 5px 0;
+}
+.hk_ui .text-danger {
+  color: #c50000;
+}
+.hk_ui .text-right {
+  text-align: right;
+}
+/*# sourceMappingURL=custom.css.map */
