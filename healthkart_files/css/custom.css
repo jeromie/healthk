@@ -88,16 +88,28 @@
 }
 .hk_ui select {
   background-color: #fff;
-  padding: 6px 5px;
-  border: 1px solid #e4e4e4;
+  padding: 8px 5px;
 }
 .hk_ui input,
 .hk_ui textarea {
   padding: 8px 5px;
-  border-radius: 2px;
+  border-radius: 0;
   box-shadow: none;
-  border-color: #e4e4e4;
   font-size: 13px;
+}
+.hk_ui input,
+.hk_ui select,
+.hk_ui textarea {
+  margin-bottom: 0;
+  border: 0;
+  border-bottom: 1px solid #c3c3c3;
+}
+.hk_ui input:focus,
+.hk_ui select:focus,
+.hk_ui textarea:focus {
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #00c1bf;
 }
 .hk_ui input[type="submit"] {
   padding: 10px 5px;
@@ -121,28 +133,13 @@
 .hk_ui label small {
   color: #777777;
 }
-.hk_ui input,
-.hk_ui select,
-.hk_ui textarea {
-  margin-bottom: 0;
-  border: 0;
-  border-bottom: 1px solid #c3c3c3;
-}
-.hk_ui input:focus,
-.hk_ui select:focus,
-.hk_ui textarea:focus {
-  box-shadow: none;
-  border-color: #00c1bf;
-}
-.hk_ui form.vertical input[type=checkbox] {
-  border: 0;
-}
 .hk_ui input[type=checkbox] {
   margin-right: 2px;
   -webkit-appearance: none;
   outline: 0;
   width: 15px;
   padding: 0 10px;
+  border: 0;
   position: relative;
 }
 .hk_ui input[type=checkbox]:before {
@@ -274,6 +271,10 @@
 }
 .hk_ui table.striped tbody td {
   padding-left: 10px;
+}
+.hk_ui table.noborder th,
+.hk_ui table.noborder td {
+  border: 0;
 }
 .hk_ui body,
 .hk_ui h1,
