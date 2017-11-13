@@ -20,13 +20,15 @@ input[type="submit"]{
 	text-shadow: none;
 }
 
-// input, a{
-// 	&.button.blue{
-// 		border: 0px solid #005ebd;
-// 		background: #005ebd;
-// 		text-shadow: none;
-// 	}
-// }
+input, a{
+	&.button.blue{
+		border: 0px solid @brand-primary;
+        border-radius: 2px;
+		background: @brand-primary;
+		text-shadow: none;
+        font-weight: 600;
+	}
+}
 
 label{
 	margin: 0 0 5px 0;

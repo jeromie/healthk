@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700,700i');
 @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
 .hk_ui {
-  background: linear-gradient(to bottom, #00c1bf 0%, #00c1bf 250px, #ffffff 250px, #ffffff 100%);
+  background: linear-gradient(to bottom, #00c1bf 0%, #00c1bf 300px, #ffffff 300px, #ffffff 100%);
   font-family: 'Lato', sans-serif;
-}
-.hk_uibody {
-  background: linear-gradient(to bottom, #00c1bf 0%, #00c1bf 10%, #ffffff 10%, #ffffff 100%);
 }
 .hk_ui .content-outer.wrap {
   border: 0;
@@ -107,6 +104,14 @@
   font-weight: 600;
   background: #134d6a;
   text-shadow: none;
+}
+.hk_ui input.button.blue,
+.hk_ui a.button.blue {
+  border: 0px solid #134d6a;
+  border-radius: 2px;
+  background: #134d6a;
+  text-shadow: none;
+  font-weight: 600;
 }
 .hk_ui label {
   margin: 0 0 5px 0;
@@ -244,20 +249,10 @@
 .hk_ui .add-row.hidden {
   display: none;
 }
-.hk_ui table.striped tbody th {
-  background: url(../images/table/table_header_repeat.jpg) repeat-x;
-}
-.hk_ui table.striped tbody th {
-  padding-left: 10px;
-  font-size: 12px;
-  text-align: left;
-}
-.hk_ui table.striped tbody td {
-  padding-left: 10px;
-}
 .hk_ui .retails-stores-table th,
 .hk_ui .retails-stores-table td {
   font-size: 0.77em;
+  border: 0;
 }
 .hk_ui .retails-stores-table ul {
   margin-bottom: 0;
@@ -265,6 +260,20 @@
 }
 .hk_ui .retails-stores-table ul li {
   padding: 2px 0;
+}
+.hk_ui .retails-stores-table td ul {
+  margin: 10px 0 10px 25px;
+}
+.hk_ui table.striped tbody th {
+  background-color: #fff;
+  color: #333333;
+  padding-left: 10px;
+  font-size: 12px;
+  text-align: left;
+  border-bottom: 1px solid #D2D2D2;
+}
+.hk_ui table.striped tbody td {
+  padding-left: 10px;
 }
 .hk_ui body,
 .hk_ui h1,
@@ -308,10 +317,49 @@
   color: red;
   margin: 5px 0;
 }
+.hk_ui .errorContainer {
+  max-width: 1020px;
+  margin: 20px auto 5px;
+  color: #bb0000;
+  font-size: 13px;
+}
+.hk_ui .errorList {
+  max-width: 960px;
+  margin: 10px auto;
+  color: #c52525;
+  font-weight: 600;
+  padding: 10px 30px;
+  background-color: #f9efef;
+  border: 1px solid #ffbbb3;
+}
+.hk_ui ul.messages {
+  max-width: 960px;
+  margin: 10px auto;
+  color: #c52525;
+  font-weight: 600;
+  padding: 10px 30px;
+  background-color: #f9efef;
+  border: 1px solid #ffbbb3;
+  list-style-type: none;
+}
+.hk_ui #error-messages {
+  max-width: 960px;
+  margin: 10px auto;
+  color: #c52525;
+  font-weight: 600;
+  padding: 10px 30px;
+  background-color: #f9efef;
+  border: 1px solid #ffbbb3;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+}
+.hk_ui #error-messages ul {
+  margin: 0;
+}
 .hk_ui .text-danger {
   color: #c50000;
 }
 .hk_ui .text-right {
   text-align: right;
 }
-/*# sourceMappingURL=custom.css.map */
