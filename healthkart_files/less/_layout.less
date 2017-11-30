@@ -4,7 +4,7 @@
 
 .content-outer.wrap{
 	// background: none;
-	// background: #ffffff;
+	background: transparent;
 	// box-shadow: 0 0 10px 5px #eaeaea;
 	border: 0;
 	// border-radius: 0;
@@ -35,7 +35,7 @@ fieldset{
 		// color: #fff;
 		// background: #006079;
 		margin: 0 0 0 0;
-		padding: 5px 10px;
+		padding: 5px 0;
 		border-radius: 0;
 		border: 0;
 	    background: none;
@@ -57,7 +57,14 @@ fieldset{
 			background: #ffffff;
 			position: relative;
 			display: inline-block;
-			padding: 0 0 0 0;
+			padding: 0 10px;
+		}
+	}
+	&.nomargin{
+		legend{
+			em{
+				padding: 0;
+			}
 		}
 	}
 }

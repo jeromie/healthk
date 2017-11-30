@@ -37,6 +37,7 @@
 		tr.owner-row {
 			select, input, label{
 				pointer-events: none;
+				opacity: 0.8;
 				background-color: #f5f5f5;
 				color: #808080;
 			}
@@ -87,10 +88,10 @@
     font-weight: 600;
     color: @brand-primary;
     margin-top: 5px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
 	i {
 		font-style: normal;
-		font-size: 12px;
+		font-size: 10px;
 		// font-weight: bold;
 	}
 	&.hidden{
@@ -102,7 +103,7 @@
 
 .retails-stores-table{
 	th, td{
-		font-size: 0.77em;
+		font-size: 12px;
 		border: 0;
 	}
 	ul{
@@ -114,7 +115,14 @@
 	}
 	td {
 		ul {
-			margin: 10px 0 10px 25px;
+			margin: 10px 0 10px 15px;
+		}
+	}
+	.delete{
+		margin-left: 5px;
+		.icon.small{
+			font-size: 16px;
+			color: #ff6d6d;
 		}
 	}
 }
@@ -124,7 +132,7 @@ table.striped {
 	tbody {
 		th {
 			// background: url(../images/table/table_header_repeat.jpg) repeat-x;
-			background-color: #fff;
+			background: #fff;
 			color: #333333;
 			padding-left: 10px;
 			font-size: 12px;

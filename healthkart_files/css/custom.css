@@ -3,8 +3,10 @@
 .hk_ui {
   background: linear-gradient(to bottom, #00c1bf 0%, #00c1bf 300px, #ffffff 300px, #ffffff 100%);
   font-family: 'Lato', sans-serif;
+  font-weight: 500;
 }
 .hk_ui .content-outer.wrap {
+  background: transparent;
   border: 0;
   padding: 0 10px 10px;
 }
@@ -26,7 +28,7 @@
 }
 .hk_ui fieldset legend {
   margin: 0 0 0 0;
-  padding: 5px 10px;
+  padding: 5px 0;
   border-radius: 0;
   border: 0;
   background: none;
@@ -39,40 +41,55 @@
   background: #ffffff;
   position: relative;
   display: inline-block;
-  padding: 0 0 0 0;
+  padding: 0 10px;
+}
+.hk_ui fieldset.nomargin legend em {
+  padding: 0;
 }
 .hk_ui * {
   box-sizing: border-box;
 }
 .hk_ui #cssmenu {
-  background: #fff;
-  border-color: #ffffff;
+  background: transparent;
+  border-color: transparent;
   border-radius: 0;
+  max-width: 1000px;
+  margin: auto;
+  border-bottom: 2px solid rgba(53, 53, 53, 0.5);
+}
+.hk_ui #cssmenu > ul {
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
 }
 .hk_ui #cssmenu > ul > li > ul > li a:hover {
   background: #fff;
 }
 .hk_ui #cssmenu > ul > li a {
   border: none;
-  color: #525252;
+  color: #353535;
   text-shadow: none;
+  padding: 12px 15px 12px 5px;
 }
 .hk_ui #cssmenu > ul > li a:before {
   top: 16px;
-  right: 6px;
+  right: 4px;
   border: 4px solid transparent;
-  border-top: 4px solid #53585d;
+  border-top: 4px solid rgba(53, 53, 53, 0.5);
 }
 .hk_ui #cssmenu > ul > li a:after {
   border-color: #bfbfbf;
+  border: 0;
 }
 .hk_ui #cssmenu ul li.has-sub:hover > a {
-  background: #fff;
-  color: #00c1bf;
+  background: transparent;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+  color: #fff;
   padding-top: 12px;
   padding-bottom: 12px;
   top: 0;
   z-index: 0;
+  text-shadow: none;
 }
 .hk_ui #cssmenu ul li.has-sub:hover > a:before {
   top: 16px;
@@ -83,18 +100,20 @@
   margin-left: 0;
   box-shadow: 0 0 10px 0px rgba(0, 0, 0, 0.25);
 }
+.hk_ui #cssmenu ul li > ul a {
+  color: #353535;
+  padding: 12px 15px;
+}
 .hk_ui #cssmenu ul li > ul a:hover {
   color: #00c1bf;
 }
-.hk_ui select {
-  background-color: #fff;
-  padding: 8px 5px;
-}
 .hk_ui input,
-.hk_ui textarea {
-  padding: 8px 5px;
+.hk_ui textarea,
+.hk_ui select {
+  padding: 5px 0;
   border-radius: 0;
   box-shadow: none;
+  background-color: #fff;
   font-size: 13px;
 }
 .hk_ui input,
@@ -111,19 +130,51 @@
   border: 0;
   border-bottom: 1px solid #00c1bf;
 }
+.hk_ui textarea {
+  height: 100px;
+}
+.hk_ui form.vertical input,
+.hk_ui form.vertical select,
+.hk_ui form.vertical textarea {
+  margin-bottom: 0;
+}
+.hk_ui input[disabled="disabled"],
+.hk_ui input.disabled {
+  background: #f5f5f5;
+}
 .hk_ui input[type="submit"] {
-  padding: 10px 5px;
+  text-indent: 0;
+}
+.hk_ui input[type="submit"].button {
+  padding: 10px 10px;
   font-weight: 600;
-  background: #134d6a;
+  background: #df4723;
   text-shadow: none;
 }
-.hk_ui input.button.blue,
-.hk_ui a.button.blue {
+.hk_ui input[type="submit"].button:hover {
+  background: #cb3f1e;
+}
+.hk_ui input[type="submit"].button.short-submit {
+  background-color: #00c1bf;
+}
+.hk_ui input[type="submit"].button.short-submit:hover {
+  background: #00a8a6;
+}
+.hk_ui input.blue,
+.hk_ui a.blue {
   border: 0px solid #134d6a;
   border-radius: 2px;
   background: #134d6a;
   text-shadow: none;
   font-weight: 600;
+  color: #fff;
+  padding: 5px 10px;
+}
+.hk_ui input.blue:hover,
+.hk_ui a.blue:hover {
+  border: 0;
+  text-shadow: none;
+  background: #0f3d54;
 }
 .hk_ui label {
   margin: 0 0 5px 0;
@@ -175,6 +226,18 @@
 .hk_ui input[type=checkbox][readonly]:before {
   opacity: 0.5;
 }
+.hk_ui .chzn-container-single .chzn-single {
+  background-image: none;
+  border-radius: 2px;
+  padding: 4px 10px;
+  height: auto;
+  box-shadow: none;
+  border: 0;
+  border-bottom: 1px solid #c3c3c3;
+}
+.hk_ui fieldset.onecol label {
+  margin-top: 25px;
+}
 .hk_ui .vendor-map-table thead th {
   font-size: 13px;
   border-width: 0;
@@ -204,6 +267,7 @@
 .hk_ui .vendor-map-table tbody tr.owner-row input,
 .hk_ui .vendor-map-table tbody tr.owner-row label {
   pointer-events: none;
+  opacity: 0.8;
   background-color: #f5f5f5;
   color: #808080;
 }
@@ -237,18 +301,17 @@
   font-weight: 600;
   color: #134d6a;
   margin-top: 5px;
-  text-transform: uppercase;
 }
 .hk_ui .add-row i {
   font-style: normal;
-  font-size: 12px;
+  font-size: 10px;
 }
 .hk_ui .add-row.hidden {
   display: none;
 }
 .hk_ui .retails-stores-table th,
 .hk_ui .retails-stores-table td {
-  font-size: 0.77em;
+  font-size: 12px;
   border: 0;
 }
 .hk_ui .retails-stores-table ul {
@@ -259,10 +322,17 @@
   padding: 2px 0;
 }
 .hk_ui .retails-stores-table td ul {
-  margin: 10px 0 10px 25px;
+  margin: 10px 0 10px 15px;
+}
+.hk_ui .retails-stores-table .delete {
+  margin-left: 5px;
+}
+.hk_ui .retails-stores-table .delete .icon.small {
+  font-size: 16px;
+  color: #ff6d6d;
 }
 .hk_ui table.striped tbody th {
-  background-color: #fff;
+  background: #fff;
   color: #333333;
   padding-left: 10px;
   font-size: 12px;
@@ -296,6 +366,21 @@
 .hk_ui tbody th {
   font-family: 'Lato', sans-serif;
 }
+@font-face {
+  font-family: 'Lato';
+  font-weight: 500;
+  src: url('fonts/ui_update/Lato-Regular.ttf');
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 600;
+  src: url('fonts/ui_update/Lato-Bold.ttf');
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  src: url('fonts/ui_update/Lato-Light.ttf');
+}
 .hk_ui #page-heading {
   padding: 30px 0 20px;
 }
@@ -325,7 +410,7 @@
   font-size: 13px;
 }
 .hk_ui .errorList {
-  max-width: 960px;
+  max-width: 1000px;
   margin: 10px auto;
   color: #c52525;
   font-weight: 600;
@@ -334,7 +419,7 @@
   border: 1px solid #ffbbb3;
 }
 .hk_ui ul.messages {
-  max-width: 960px;
+  max-width: 1000px;
   margin: 10px auto;
   color: #c52525;
   font-weight: 600;
@@ -344,7 +429,7 @@
   list-style-type: none;
 }
 .hk_ui #error-messages {
-  max-width: 960px;
+  max-width: 1000px;
   margin: 10px auto;
   color: #c52525;
   font-weight: 600;
@@ -356,6 +441,26 @@
   padding: 0;
 }
 .hk_ui #error-messages ul {
+  margin: 0;
+}
+.hk_ui .validate-error {
+  color: red;
+  margin: 5px 0;
+}
+.hk_ui .validate-error.hidden {
+  display: none;
+}
+.hk_ui .gstn-warning {
+  font-size: 13px;
+}
+.hk_ui .gstn-warning.hidden {
+  display: none;
+}
+.hk_ui .notice.warning {
+  border: 1px solid #e2c17d;
+  background: #fcf8e3;
+  color: #6f562b;
+  text-shadow: none;
   margin: 0;
 }
 .hk_ui .text-danger {
